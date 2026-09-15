@@ -1,0 +1,85 @@
+HORIZONTAL LOLLIPOP CHART
+ 
+{
+  "chart": {
+    "inverted": true
+  },
+ 
+  "title": {
+    "text": "Customer by Country"
+  },
+ 
+  "credits": {
+    "enabled": false
+  },
+ 
+  "legend": {
+    "enabled": false
+  },
+ 
+  "tooltip": {
+    "headerFormat": "Country: <b>{point.key}</b><br/>",
+    "pointFormat": "Current Year Customers: <b>{point.y}</b>"
+},
+ 
+  "xAxis": {
+    "categories": ["getColumn",0]
+  },
+ 
+  "yAxis": {
+    "title": {
+      "text": " "
+    }
+  },
+ 
+  "plotOptions":{
+    "bar":{
+        "pointWidth":14
+    }
+},
+ 
+  "series":[
+ 
+    {
+  "type":"bar",
+  "data":["getColumn",1],
+  "color":"#2b95c9",
+  "borderWidth":0,
+  "pointWidth":10,
+  "dataLabels":{
+      "enabled":false
+  }
+},
+ 
+    {
+ 
+      "type":"scatter",
+ 
+      "data":["getColumn",1],
+ 
+      "marker":{
+    "symbol":"circle",
+    "radius":11,
+    "fillColor":"white",
+    "lineWidth":1,
+    "lineColor":"#2b95c9"
+},
+ 
+      "dataLabels":{
+    "enabled":true,
+    "inside":true,
+    "verticalAlign":"middle",
+    "align":"center",
+    "style":{
+        "textOutline":"none",
+        "fontWeight":"normal",
+        "fontSize":"11px"
+    }
+}
+ 
+    }
+ 
+  ]
+ 
+}
+ 
