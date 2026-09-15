@@ -1,0 +1,106 @@
+VERTICAL BULLET CHART
+ 
+{
+  "chart": {
+    "type": "column"
+  },
+ 
+  "title": {
+    "text": "",
+    "useHTML": true
+  },
+ 
+  "credits": {
+    "enabled": false
+  },
+ 
+  "legend": {
+    "enabled": false
+  },
+ 
+  "xAxis": {
+  "categories": ["getColumn",0],
+  "lineWidth": 0,
+  "tickWidth": 0,
+  "tickLength": 0,
+  "title": {
+    "text": ""
+  }
+},
+"yAxis": {
+  "title": {
+    "text": ""
+  },
+  "labels": {
+    "enabled": false
+  },
+  "lineWidth": 0,
+  "tickWidth": 0,
+  "tickLength": 0,
+  "gridLineWidth": 0
+},
+ 
+  "tooltip": {
+  "shared": true,
+  "headerFormat": "",
+  "pointFormat": "Products <b>:{point.category}</b><br/> {series.name}: <b>${point.y:,.0f}</b><br/>"
+},
+ 
+  "plotOptions": {
+    "column": {
+      "pointPadding": 0.25,
+      "borderWidth": 0,
+      "groupPadding": 0.15
+    },
+    "scatter": {
+      "marker": {
+        "symbol": "square",
+        "radius": 8
+      }
+    }
+  },
+ 
+  "series": [
+ 
+    {
+      "type": "column",
+ 
+      "name": "Current Year Sales",
+ 
+      "data": ["getColumn",1],
+ 
+      "colorByPoint": true,
+ 
+      "colors": [
+        "#27A8D8",
+        "#D8DEE9",
+        "#D8DEE9",
+        "#D8DEE9",
+        "#D8DEE9",
+        "#D8DEE9"
+      ]
+    },
+ 
+    {
+      "type": "scatter",
+ 
+      "name": "Previous Year Sales",
+ 
+      "data": ["getColumn",2],
+ 
+      "marker": {
+  "symbol": "url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='4'>,
+  "width": 55,
+  "height": 4
+},
+ 
+      "dataLabels":{
+ 
+        "enabled":false
+ 
+      }
+ 
+    }
+ 
+  ]
+}
