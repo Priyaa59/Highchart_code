@@ -1,0 +1,110 @@
+HORTICAL BULLET CHART
+ 
+{
+  "chart": {
+    "type": "bar",
+    "inverted": true
+  },
+ 
+  "title": {
+    "text": "",
+    "useHTML": true
+  },
+  
+  "credits": {
+    "enabled": false
+  },
+ 
+  "legend": {
+    "enabled": false
+  },
+ 
+  "tooltip": {
+    "shared": true,
+    "headerFormat": "",
+    "pointFormat": "Country :<b> {point.category}</b><br/> {series.name} :<b> ${point.y:,.0f} </b>"
+  },
+ 
+  "xAxis": {
+    "categories": ["getColumn",0],
+    "lineWidth": 0,
+    "tickWidth": 0,
+    "tickLength": 0,
+    "title": {
+      "text": ""
+    }
+  },
+ 
+  "yAxis": {
+    "title": {
+      "text": ""
+    },
+    "labels": {
+      "enabled": false
+    },
+    "lineWidth": 0,
+    "gridLineWidth": 0,
+    "tickWidth": 0,
+    "tickLength": 0
+  },
+ 
+  "plotOptions": {
+    "bar": {
+      "pointWidth": 18,
+      "borderWidth": 0
+    },
+ 
+    "scatter": {
+      "marker": {
+        "symbol": "square",
+        "radius": 10,
+        "fillColor": "#666666"
+      }
+    }
+  },
+ 
+  "series": [
+ 
+    {
+      "type": "bar",
+      "name": "Current Year Sales",
+      "data": ["getColumn",1],
+ 
+      "colorByPoint": true,
+ 
+      "colors": [
+        "#2b95c9",
+        "#d6dce8",
+        "#d6dce8",
+        "#d6dce8",
+        "#d6dce8",
+        "#d6dce8",
+        "#d6dce8",
+        "#d6dce8"
+      ]
+    },
+ 
+    {
+      "type": "scatter",
+ 
+      "name": "Previous Year Sales",
+ 
+      "data": ["getColumn",2],
+ 
+     "marker": {
+  "symbol": "url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2' height='24'>,
+  "width": 2,
+  "height": 40
+},
+ 
+      "dataLabels":{
+ 
+        "enabled":false
+ 
+      }
+ 
+    }
+ 
+  ]
+ 
+}
