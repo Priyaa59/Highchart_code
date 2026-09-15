@@ -1,0 +1,77 @@
+MATRIX BUBBLE CHART
+ 
+{
+  "lang": {
+    "thousandsSep": ","
+  },
+  
+  "chart": {
+    "type": "bubble",
+    "plotBorderWidth": 1,
+    "backgroundColor": "#FFFFFF"
+  },
+  "title": {
+    "text": "Sales | by country&Products",
+    "align": "left",
+    "style": {
+      "color": "#333333",
+      "fontSize": "24px"
+    }
+  },
+  "credits": {
+    "enabled": false
+  },
+  "xAxis": {
+    "categories": ["unique", ["getColumn", 0]],
+    "opposite": true,
+    "gridLineWidth": 0,
+    "lineWidth": 0,
+    "tickLength": 0
+  },
+  "yAxis": {
+    "categories": ["unique", ["getColumn", 1]],
+    "title": { "text": "" },
+    "reversed": false,
+    "gridLineWidth": 0,
+    "lineWidth": 0,
+    "startOnTick": false,
+    "endOnTick": false,
+    "tickAmount": 6
+  },
+  "legend": {
+    "enabled": false
+  },
+  "tooltip": {
+    "useHTML": true,
+    "headerFormat": "",
+    "pointFormat": "Country: <b>{point.series.xAxis.categories.(point.x)}</b><br/>Product: <b>{point.series.yAxis.categories.(point.y)}</b><br/>Current Year Sales: <b>${point.z:,.0f}</b>"
+  },
+  "plotOptions": {
+    "bubble": {
+      "marker": {
+        "symbol": "square",
+        "lineWidth": 0
+      },
+      "minSize": 2,
+      "maxSize": 60
+    }
+  },
+  "colorAxis": {
+    "minColor": "#a0cbe8",
+    "maxColor": "#1f4e79"
+  },
+  "series": [
+    {
+      "name": "Sales",
+      "data": [
+        "map",
+        ["getColumn", 0, 1, 2],
+        {
+          "x": ["indexOf", ["unique", ["getColumn", 0]], ["get", ["item"], 0]],
+          "y": ["indexOf", ["unique", ["getColumn", 1]], ["get", ["item"], 1]],
+          "z": ["get", ["item"], 2]
+        }
+      ]
+    }
+  ]
+}
