@@ -1,0 +1,66 @@
+HORIZONTAL BAR CHART
+ 
+{
+  "chart": {
+    "type": "bar",
+    "inverted": true
+  },
+ 
+  "title": {
+    "text": "Sales by Marital Status"
+  },
+ 
+  "credits": {
+    "enabled": false
+  },
+ 
+  "legend": {
+    "enabled": false
+  },
+  "tooltip": {
+      "headerFormat": null,
+      "pointFormat": "Martial Status : <b>{point.category}</b><br/>% of Total Current Year Sales : <b>{point.y}%</b>"
+  },
+  "xAxis": {
+    "categories": ["getColumn", 0],
+    "labels": {
+        "enabled": true
+    },
+    "lineWidth": 0,
+    "tickLength": 0
+},
+ 
+ "yAxis": {
+    "title": {
+        "text": ""
+    },
+    "labels": {
+        "enabled": false
+    },
+    "gridLineWidth": 0,
+    "lineWidth": 0,
+    "tickLength": 0,
+    "tickWidth": 0
+},
+ 
+  "plotOptions": {
+    "bar": {
+      "pointWidth": 8,
+      "borderWidth": 0
+    }
+  },
+ 
+  "series":[
+    {
+      "data":["getColumn",1],
+      "colorByPoint":true,
+      "colors":[
+        "#36a2d8",
+        "#d6dce8",
+        "#d6dce8",
+        "#d6dce8",
+        "#d6dce8"
+      ]
+    }
+  ]
+}
